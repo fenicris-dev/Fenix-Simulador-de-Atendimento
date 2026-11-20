@@ -1,0 +1,24 @@
+Fênix | Simulado de Atendimento — versão 1.0 (20/11/2026)
+Selo: v1.0 | c 5.8 | Livro das Regras v5.8
+
+ARQUIVOS
+- fenix-simulado-de-atendimento-v1.0.html  app com a versão no nome (controle interno)
+- index.html                               cópia neutra, sem versão (a que vai para o GitHub Pages)
+- sw.js                                    service worker para abrir sem internet (publicar junto do index.html)
+- fenix-simulado-de-atendimento-manual-v1.0.md / .pdf   manual do usuário (o app também traz o MD embutido)
+- fenix-simulado-de-atendimento-changelog-v1.0.md       changelog
+- img/                                     prints usados no manual
+- LEIAME.txt                               este arquivo
+
+COMO PUBLICAR
+1. Suba index.html, sw.js e o PDF do manual na mesma pasta do GitHub Pages.
+2. O app carrega o Fênix Core de https://fenicris-dev.github.io/Fenix-Core/fenix-core.js (não altera o core).
+3. Rode o Painel da biblioteca antes de publicar as regras do Firestore (coleções: membros, roteiros,
+   simulacoes, ranking, conquistas, supervisao).
+
+PONTOS PARA CONFERIR NA PRIMEIRA PUBLICAÇÃO
+- Os nomes das funções da nuvem no core (salvarDoc, listarDocs, excluirMinhaConta) e do login Google
+  (entrarComGoogle) foram ligados por detecção; se o core usar outros nomes, ajuste a ponte "Nuvem" no código.
+- A águia embutida é provisória (desenhada em SVG); troque pela Fenix_Logo_Branca oficial em base64.
+- Links dos Termos e da Política apontam para a pasta Termos/ do Fenix-Core; ajuste para os arquivos exatos.
+- Teste com dois aparelhos (ranking e supervisor) depois de ligar a nuvem.
