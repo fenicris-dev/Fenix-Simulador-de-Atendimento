@@ -1,17 +1,27 @@
-Fênix | Simulado de Atendimento — versão 1.0 (20/11/2026)
-Selo: v1.0 | c 5.8 | Livro das Regras v5.8
+Fênix | Simulado de Atendimento — versão 1.6 (22/11/2026)
+Selo: v1.6 | c 5.8 | Livro das Regras v5.8
+
+NOVIDADE DA 1.6: logo oficial da Fênix (águia) no app e nos PDFs; Termos de Uso e Política de Privacidade oficiais (v4.9, 27/10/2026) com os links reais.
+Da 1.5: persona 13, Cliente vital (home care), nos 10 cenários: 130 roteiros. PDFs avulsos de todos em roteiros-pdf-v1.6/.
+Da 1.4: botão "Baixar PDF" em cada roteiro e ícone oficial do app.
+Da 1.2: área "Aprender" com a Chamada Modelo (o sistema faz os dois lados) e a Troca de Lugar (o aluno é o cliente).
+Da 1.1: os roteiros de fábrica estão dentro do app; localidades fictícias; empresa padrão Fênix.
+Localidades dos roteiros trocadas por nomes fictícios; empresa padrão: Fênix.
 
 ARQUIVOS
-- fenix-simulado-de-atendimento-v1.0.html  app com a versão no nome (controle interno)
+- fenix-simulado-de-atendimento-v1.6.html  app com a versão no nome (controle interno)
 - index.html                               cópia neutra, sem versão (a que vai para o GitHub Pages)
+- icone-192.png, icone-512.png, icone-maskable-512.png, apple-touch-icon.png   ícones do app (publicar junto do index.html)
 - sw.js                                    service worker para abrir sem internet (publicar junto do index.html)
-- fenix-simulado-de-atendimento-manual-v1.0.md / .pdf   manual do usuário (o app também traz o MD embutido)
-- fenix-simulado-de-atendimento-changelog-v1.0.md       changelog
+- fenix-simulado-de-atendimento-manual-v1.6.md / .pdf   manual do usuário (o app também traz o MD embutido)
+- fenix-simulado-de-atendimento-changelog-v1.6.md       changelog
 - img/                                     prints usados no manual
+- roteiros-pdf-v1.6/                        os 130 roteiros em PDF avulso (um por arquivo), gerados pelo app
+- roteiros-referencia-v1.6/                 todos os 130 roteiros em um JSON (roteiros-completos-v1.6.json). Os .md, o catálogo, os consolidados e o índice da v1.5 continuam valendo: os roteiros não mudaram.
 - LEIAME.txt                               este arquivo
 
 COMO PUBLICAR
-1. Suba index.html, sw.js e o PDF do manual na mesma pasta do GitHub Pages.
+1. Suba index.html, sw.js, os 4 arquivos de ícone e o PDF do manual na mesma pasta do GitHub Pages.
 2. O app carrega o Fênix Core de https://fenicris-dev.github.io/Fenix-Core/fenix-core.js (não altera o core).
 3. Rode o Painel da biblioteca antes de publicar as regras do Firestore (coleções: membros, roteiros,
    simulacoes, ranking, conquistas, supervisao).
@@ -19,6 +29,9 @@ COMO PUBLICAR
 PONTOS PARA CONFERIR NA PRIMEIRA PUBLICAÇÃO
 - Os nomes das funções da nuvem no core (salvarDoc, listarDocs, excluirMinhaConta) e do login Google
   (entrarComGoogle) foram ligados por detecção; se o core usar outros nomes, ajuste a ponte "Nuvem" no código.
-- A águia embutida é provisória (desenhada em SVG); troque pela Fenix_Logo_Branca oficial em base64.
-- Links dos Termos e da Política apontam para a pasta Termos/ do Fenix-Core; ajuste para os arquivos exatos.
+- Os Termos e a Política abrem https://fenicris-dev.github.io/Fenix-Core/Termos/fenix-termos-de-uso.html e .../fenix-politica-de-privacidade.html; confirme que os dois arquivos estão publicados nessa pasta.
+- Os Termos (cláusula 2) falam em acesso por e-mail e senha; o Simulado entra só com e-mail. Alinhe uma das duas pontas antes de publicar.
+- Prazos e valores dos roteiros são exemplos; ajuste à política da operação antes de usar com alunos reais.
+- O Duelo de alunos (dois aparelhos) ainda não existe: depende da nuvem do Core.
+- A voz sintética varia por aparelho e não transmite emoção; para tom de voz real, grave atendentes reais nos roteiros-chave.
 - Teste com dois aparelhos (ranking e supervisor) depois de ligar a nuvem.
